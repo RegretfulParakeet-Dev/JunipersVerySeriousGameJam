@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ctbifaiga1hio"]
+
+[ext_resource type="Script" uid="uid://po0u1bv4qlci" path="res://Scripts/mouth.gd" id="2_33e5y"]
+[ext_resource type="Texture2D" uid="uid://dnmdbsb4pt8uw" path="res://Assets/prototypechompers.png" id="3_stg3s"]
+
+[node name="Chompers" type="CharacterBody2D" unique_id=1157881289]
+collision_mask = 2
+motion_mode = 1
+
+[node name="mouth" type="Area2D" parent="." unique_id=2098359656]
+collision_mask = 2
+script = ExtResource("2_33e5y")
+
+[node name="Mouth" type="CollisionPolygon2D" parent="mouth" unique_id=1400194243]
+polygon = PackedVector2Array(60, -49, 20, -13, 22, 12, 62, 41, 81, 32, 87, -6, 86, -34)
+
+[node name="Body" type="CollisionPolygon2D" parent="." unique_id=1631882628]
+process_priority = 1
+light_mask = 0
+visibility_layer = 7
+scale = Vector2(1.770369, 3.9508927)
+build_mode = 1
+polygon = PackedVector2Array(10.167372, 3.5435033, 36.715508, 8.605651, 13.556496, 10.124294, 2.8242698, 13.414691, -7.9079556, 13.414691, -10.167372, 12.149154, -22.594158, 12.655369, -28.807552, 14.680227, -42.364048, 14.42712, -42.364048, -5.3152547, -36.715508, -14.42712, -24.853575, -8.858758, 32.76153, -12.149154, 24.853575, -9.61808, 9.037663, -4.80904, 5.6485395, 0.25310737)
+
+[node name="ChompersAnimator" type="Node2D" parent="." unique_id=1573023936]
+
+[node name="ChomperSprite" type="Sprite2D" parent="ChompersAnimator" unique_id=1352732465]
+scale = Vector2(2.3750005, 1.8203126)
+texture = ExtResource("3_stg3s")
+
+[connection signal="area_entered" from="mouth" to="mouth" method="_on_area_entered"]

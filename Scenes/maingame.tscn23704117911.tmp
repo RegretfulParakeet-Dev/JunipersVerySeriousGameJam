@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dy5r7fuian0y0"]
+
+[ext_resource type="Script" uid="uid://c3t5gu2acspty" path="res://Scripts/maingame.gd" id="1_rr6bl"]
+[ext_resource type="PackedScene" uid="uid://4ob10d3dxy84" path="res://Scenes/hud.tscn" id="2_2x4cu"]
+[ext_resource type="PackedScene" uid="uid://cp1yefsuxf6kp" path="res://Scenes/stopwatch.tscn" id="2_n8kd5"]
+[ext_resource type="Script" uid="uid://clegv73atdwa7" path="res://Scripts/chompers.gd" id="3_2x4cu"]
+[ext_resource type="PackedScene" uid="uid://ctbifaiga1hio" path="res://Scenes/chompers.tscn" id="4_3mna3"]
+
+[sub_resource type="GDScript" id="GDScript_8kj5e"]
+script/source = "extends Node2D
+"
+
+[sub_resource type="GDScript" id="GDScript_eujb5"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="maingame" type="Node2D" unique_id=436620032]
+script = ExtResource("1_rr6bl")
+
+[node name="Stopwatch" parent="." unique_id=612478060 instance=ExtResource("2_n8kd5")]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1772959680]
+offset_right = 1080.0
+offset_bottom = 800.0
+
+[node name="HUD" parent="." unique_id=1103082934 instance=ExtResource("2_2x4cu")]
+
+[node name="Chompers" parent="." unique_id=1157881289 instance=ExtResource("4_3mna3")]
+script = ExtResource("3_2x4cu")
+
+[node name="CarrotSpawner" type="Node2D" parent="." unique_id=536967700]
+script = SubResource("GDScript_8kj5e")
+
+[node name="AppleSpawner" type="Node2D" parent="." unique_id=467786488]
+script = SubResource("GDScript_eujb5")
+
+[node name="AppleSpawn1" type="Marker2D" parent="AppleSpawner" unique_id=396524307]
+position = Vector2(-151, -351)
+
+[node name="AppleSpawn2" type="Marker2D" parent="AppleSpawner" unique_id=1572437892]
+position = Vector2(492, -401)
+
+[node name="AppleSpawn3" type="Marker2D" parent="AppleSpawner" unique_id=1892643061]
+position = Vector2(1270, -368)
+
+[node name="AppleSpawn4" type="Marker2D" parent="AppleSpawner" unique_id=817329941]
+position = Vector2(1611, 367)
+
+[node name="AppleSpawn5" type="Marker2D" parent="AppleSpawner" unique_id=1594693852]
+position = Vector2(1440, 1078)
+
+[node name="AppleSpawn6" type="Marker2D" parent="AppleSpawner" unique_id=1314139645]
+position = Vector2(548, 1202)
+
+[node name="AppleSpawn7" type="Marker2D" parent="AppleSpawner" unique_id=1382367762]
+position = Vector2(-230, 1127)
+
+[node name="AppleSpawn8" type="Marker2D" parent="AppleSpawner" unique_id=332100836]
+position = Vector2(-487, 380)

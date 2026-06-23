@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cgkfnajgn2epw"]
+
+[ext_resource type="Script" uid="uid://hgsorfmb7qwm" path="res://Scripts/carrotspawn.gd" id="1_fwtnm"]
+[ext_resource type="PackedScene" uid="uid://cdvdsdduliavi" path="res://Scenes/carrot.tscn" id="2_jbeqn"]
+
+[node name="CarrotSpawning" type="Node2D" unique_id=591259531]
+script = ExtResource("1_fwtnm")
+carrot_scene = ExtResource("2_jbeqn")
+
+[node name="CarrotFirstTimer" type="Timer" parent="." unique_id=97123258]
+
+[node name="CarrotSpawn1" type="Marker2D" parent="." unique_id=627707249]
+position = Vector2(95, -129)
+
+[node name="CarrotSpawn2" type="Marker2D" parent="." unique_id=552779674]
+position = Vector2(565, -156)
+
+[node name="CarrotSpawn3" type="Marker2D" parent="." unique_id=1569342271]
+position = Vector2(991, -144)
+
+[node name="CarrotSpawn4" type="Marker2D" parent="." unique_id=1598920939]
+position = Vector2(-157, 160)
+
+[node name="CarrotSpawn5" type="Marker2D" parent="." unique_id=1535198651]
+position = Vector2(-157, 518)
+
+[node name="CarrotSpawn6" type="Marker2D" parent="." unique_id=1037274580]
+position = Vector2(24, 968)
+
+[node name="CarrotSpawn7" type="Marker2D" parent="." unique_id=855068972]
+position = Vector2(491, 1001)
+
+[node name="CarrotSpawn8" type="Marker2D" parent="." unique_id=1446628688]
+position = Vector2(1019, 946)
+
+[node name="CarrotSpawn9" type="Marker2D" parent="." unique_id=932780315]
+position = Vector2(1275, 531)
+
+[node name="CarrotSpawn10" type="Marker2D" parent="." unique_id=188886852]
+position = Vector2(1247, 151)

@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://4ob10d3dxy84"]
+
+[ext_resource type="Script" uid="uid://cmq2ki5dj3mx0" path="res://Scripts/hud.gd" id="1_fccik"]
+[ext_resource type="FontFile" uid="uid://dfxpcikfrqwdd" path="res://Assets/Fonts/Matcha Cih.ttf" id="2_bjfho"]
+[ext_resource type="Theme" uid="uid://cine4vug5x4cx" path="res://Assets/hudtheme.tres" id="3_6fbih"]
+[ext_resource type="Script" uid="uid://b445oxtqvhphj" path="res://Scripts/score.gd" id="4_t1xeu"]
+
+[sub_resource type="Theme" id="Theme_6fbih"]
+
+[node name="HUD" type="Control" unique_id=1103082934 node_paths=PackedStringArray("stopwatch_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fccik")
+stopwatch_label = NodePath("StopwatchLabel")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=771893037]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 24.0
+offset_right = 142.0
+offset_bottom = 53.0
+theme = SubResource("Theme_6fbih")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bjfho")
+theme_override_font_sizes/font_size = 22
+text = "Score:"
+
+[node name="Score" type="Label" parent="." unique_id=1399246765]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 25.0
+offset_right = 259.0
+offset_bottom = 54.0
+theme = ExtResource("3_6fbih")
+text = "0"
+script = ExtResource("4_t1xeu")
+
+[node name="TimeLabel" type="Label" parent="." unique_id=931572352]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 58.0
+offset_right = 144.0
+offset_bottom = 87.0
+theme = ExtResource("3_6fbih")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bjfho")
+theme_override_font_sizes/font_size = 22
+text = "Time:"
+
+[node name="StopwatchLabel" type="Label" parent="." unique_id=1318203449]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 60.0
+offset_right = 249.0
+offset_bottom = 89.0
+theme = ExtResource("3_6fbih")
+text = "00:00:00"
+vertical_alignment = 1

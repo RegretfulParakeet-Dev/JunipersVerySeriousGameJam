@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://btm0hsybcyf5u"]
+
+[ext_resource type="Script" uid="uid://ir8cj2cdrekb" path="res://Scripts/glue.gd" id="1_b63so"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6mmo"]
+
+[node name="Glue" type="RigidBody2D" unique_id=735160293]
+
+[node name="GlueShape" type="CollisionShape2D" parent="." unique_id=348739508]
+shape = SubResource("RectangleShape2D_n6mmo")
+script = ExtResource("1_b63so")
+
+[node name="GlueAnimation" type="Node2D" parent="." unique_id=1132748237]

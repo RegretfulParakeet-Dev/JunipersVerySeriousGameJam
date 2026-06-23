@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://wuhtt25gdkrj"]
+
+[ext_resource type="Script" uid="uid://d21bhpwfirndb" path="res://Scripts/apple.gd" id="1_ej78e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awg33"]
+size = Vector2(31, 9)
+
+[node name="Apple" type="RigidBody2D" unique_id=1947774441]
+
+[node name="AppleShape" type="CollisionShape2D" parent="." unique_id=345157899]
+shape = SubResource("RectangleShape2D_awg33")
+script = ExtResource("1_ej78e")
+
+[node name="AppleAnimation" type="Node2D" parent="." unique_id=1102690531]

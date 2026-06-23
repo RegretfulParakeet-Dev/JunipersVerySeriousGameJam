@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cdvdsdduliavi"]
+
+[ext_resource type="Script" uid="uid://dt3rq5yudlum8" path="res://Scripts/carrot.gd" id="1_oqq4l"]
+[ext_resource type="Texture2D" uid="uid://bsxbvq4duguh0" path="res://Assets/Carrot/Carrot1.png" id="2_ni15g"]
+[ext_resource type="Texture2D" uid="uid://b7gjjgxgr2vey" path="res://Assets/Carrot/Carrot5.png" id="3_8tkmy"]
+[ext_resource type="Texture2D" uid="uid://crrlhpn6xcjb5" path="res://Assets/Carrot/Carrot2.png" id="4_3kscm"]
+[ext_resource type="Texture2D" uid="uid://bpjd7e6yw3n2u" path="res://Assets/Carrot/Carrot6.png" id="5_352fm"]
+[ext_resource type="Texture2D" uid="uid://buxv5y8bja3mr" path="res://Assets/Carrot/Carrot3.png" id="6_r0g6j"]
+[ext_resource type="Texture2D" uid="uid://dc50nbkpdd3tj" path="res://Assets/Carrot/Carrot7.png" id="7_bxw1x"]
+[ext_resource type="Texture2D" uid="uid://ht7jg1eu80n" path="res://Assets/Carrot/Carrot4.png" id="8_i5ccr"]
+[ext_resource type="Texture2D" uid="uid://crh2idkd6l70e" path="res://Assets/Carrot/Carrot8.png" id="9_gt0n6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ca1pp"]
+size = Vector2(31, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g0p3h"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("2_ni15g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8tkmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3kscm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_352fm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_r0g6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bxw1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_i5ccr")
+}, {
+"duration": 0.3,
+"texture": ExtResource("9_gt0n6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Carrot" type="Area2D" unique_id=760949879]
+collision_layer = 2
+script = ExtResource("1_oqq4l")
+
+[node name="CarrotShape" type="CollisionShape2D" parent="." unique_id=1685633462]
+shape = SubResource("RectangleShape2D_ca1pp")
+
+[node name="CarrotAniLoop" type="AnimatedSprite2D" parent="." unique_id=654402432]
+sprite_frames = SubResource("SpriteFrames_g0p3h")
+autoplay = "default"
+frame_progress = 0.84409314
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
