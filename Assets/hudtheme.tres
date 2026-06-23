@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://cine4vug5x4cx"]
+
+[ext_resource type="FontFile" uid="uid://dfxpcikfrqwdd" path="res://Assets/Fonts/Matcha Cih.ttf" id="1_4em64"]
+
+[resource]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 22
+Label/fonts/font = ExtResource("1_4em64")
